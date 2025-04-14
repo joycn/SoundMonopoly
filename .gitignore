@@ -22,7 +22,7 @@ yarn-error.log*
 
 # IDE and editor files
 .idea/
-.vscode/
+!.vscode/
 *.swp
 *.swo
 .DS_Store
