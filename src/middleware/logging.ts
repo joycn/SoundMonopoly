@@ -5,8 +5,11 @@ export function requestLogger(req: Request, res: Response, next: NextFunction) {
     
     // Log request
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
-    if (Object.keys(req.body).length > 0) {
+    if (req.body && Object.keys(req.body).length > 0) {
         console.log('Request Body:', req.body);
+    }
+    if (req.query && Object.keys(req.query).length > 0) {
+        console.log('Query Params:', req.query);
     }
 
     // Capture response
